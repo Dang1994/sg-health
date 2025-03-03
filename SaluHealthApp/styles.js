@@ -1,0 +1,95 @@
+import { StyleSheet } from 'react-native';
+
+export const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#f5f5f5',
+    paddingHorizontal: 10,
+    paddingTop: 20,
+  },
+  header: {
+    fontSize: 28,
+    fontWeight: 'bold',
+    color: '#6200ea',
+    textAlign: 'center',
+    marginBottom: 10,
+  },
+  chatContainer: {
+    flex: 1,
+    marginBottom: 10,
+    padding: 10,
+    backgroundColor: '#fff',
+    borderRadius: 10,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 5,
+  },
+  userMessageContainer: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    marginVertical: 5,
+  },
+  botMessageContainer: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    marginVertical: 5,
+  },
+  messageWrapper: {
+    flex: 1,
+    marginLeft: 10,
+    backgroundColor: '#e0f7fa',
+    padding: 10,
+    borderRadius: 5,
+  },
+  userMessage: {
+    color: '#000',
+    fontSize: 16,
+  },
+  botMessage: {
+    color: '#000',
+    fontSize: 16,
+    backgroundColor: '#f1f1f1',
+  },
+  timestamp: {
+    fontSize: 12,
+    color: '#888',
+    alignSelf: 'flex-end',
+  },
+  typingIndicator: {
+    fontStyle: 'italic',
+    color: '#888',
+    textAlign: 'center',
+    marginTop: 5,
+  },
+  inputContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    borderTopWidth: 1,
+    borderTopColor: '#ddd',
+    padding: 10,
+    backgroundColor: '#fff',
+  },
+  input: {
+    flex: 1,
+    height: 40,
+    borderColor: '#ccc',
+    borderWidth: 1,
+    borderRadius: 5,
+    paddingHorizontal: 10,
+    marginRight: 10,
+    backgroundColor: '#fff',
+  },
+  clearButton: {
+    alignItems: 'center',
+    padding: 10,
+    backgroundColor: '#ff3b30',
+    borderRadius: 5,
+    marginBottom: 10,
+  },
+  clearButtonText: {
+    color: '#fff',
+    fontWeight: 'bold',
+  },
+});

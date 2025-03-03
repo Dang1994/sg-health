@@ -1,0 +1,145 @@
+version: "2.0"
+
+session_config:
+  session_expiration_time: 60  # Session expires after 60 minutes
+  carry_over_slots_to_new_session: true
+
+intents:
+  - salu_greet
+  - salu_goodbye
+  - ask_common_health_issues_western_odisha
+  - ask_prevent_malaria_western_odisha
+  - ask_about_salu
+  - ask_about_health
+  - ask_about_diabetes
+
+entities:
+  - gender
+  - age
+  - hypertension
+  - heart_disease
+  - smoking_history
+  - weight
+  - height
+  - HbA1c_level
+  - blood_glucose_level
+
+actions:
+  - action_predict_health_risk
+  - action_default_fallback
+
+responses:
+  utter_salu_greet:
+    - text: "Hello! I am Salu, your Health assistant. How can I assist you today?"
+
+  utter_salu_goodbye:
+    - text: "Goodbye from Salu! Stay healthy and take care!"
+
+  utter_ask_about_health:
+    - text: >
+        Health in Western Odisha is important. We face challenges like malaria, typhoid, and kidney issues due to water quality.
+        Remember to drink clean water, eat balanced meals, and take precautions, especially during monsoons.
+
+  utter_ask_about_salu:
+    - text: "I'm doing great! Here to help you stay healthy!"
+
+  utter_ask_common_health_issues_western_odisha:
+    - text: "Some common health issues in Western Odisha include malnutrition, malaria, diarrhea, and respiratory infections, especially during the monsoon season."
+
+  utter_prevent_malaria_western_odisha:
+    - text: >
+        To prevent malaria in Western Odisha, use mosquito nets, wear protective clothing, and apply mosquito repellent.
+        Also, keep your surroundings clean and avoid water stagnation.
+
+  utter_what_salu_can_do:
+    - text: >
+        I am Salu, your Health Assistant. Here's how I can help:
+        - Bridge the gap caused by doctor shortages by providing health advice.
+        - Improve health literacy with clear and accessible information.
+        - Address language barriers with support in regional languages.
+        - Assist with healthcare service information and reports.
+        - Simplify communication between private practitioners and people.
+        - Provide public health updates digitally, reducing reliance on paper.
+
+  utter_ask_gender:
+    - text: "What is your gender (Male or Female)?"
+  utter_ask_age:
+    - text: "What is your age?"
+  utter_ask_hypertension:
+    - text: "Do you have hypertension? (0 for No, 1 for Yes)"
+  utter_ask_heart_disease:
+    - text: "Do you have heart disease? (0 for No, 1 for Yes)"
+  utter_ask_smoking_history:
+    - text: "What is your smoking history (e.g., never, current, No Info)?"
+  utter_ask_weight:
+    - text: "What is your weight (in kg)?"
+  utter_ask_height:
+    - text: "What is your height (in cm)?"
+  utter_ask_HbA1c_level:
+    - text: "What is your HbA1c level?"
+  utter_ask_blood_glucose_level:
+    - text: "What is your blood glucose level?"
+
+  utter_default:
+    - text: "I'm sorry, I didn't understand that. Could you rephrase?"
+
+slots:
+  gender:
+    type: text
+    mappings:
+      - type: from_text
+  age:
+    type: float
+    mappings:
+      - type: from_text
+  hypertension:
+    type: categorical
+    values:
+      - 0
+      - 1
+    mappings:
+      - type: from_text
+  heart_disease:
+    type: categorical
+    values:
+      - 0
+      - 1
+    mappings:
+      - type: from_text
+  smoking_history:
+    type: text
+    mappings:
+      - type: from_text
+  weight:
+    type: float
+    mappings:
+      - type: from_text
+  height:
+    type: float
+    mappings:
+      - type: from_text
+  bmi:
+    type: float
+    mappings:
+      - type: custom  # Calculated, not collected directly
+  HbA1c_level:
+    type: float
+    mappings:
+      - type: from_text
+  blood_glucose_level:
+    type: float
+    mappings:
+      - type: from_text
+
+forms:
+  diabetes_form:
+    required_slots:
+      - gender
+      - age
+      - hypertension
+      - heart_disease
+      - smoking_history
+      - weight
+      - height
+      - HbA1c_level
+      - blood_glucose_level

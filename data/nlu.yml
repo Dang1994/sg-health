@@ -1,0 +1,83 @@
+version: "2.0"
+nlu:
+  - intent: salu_greet
+    examples: |
+      - Hi Salu
+      - Hello Salu
+      - Good morning, Salu
+      - Hey, how are you Salu?
+      - Hello
+      - Hi there
+      - Hi Salu, good to see you
+      - Hey
+
+  - intent: salu_goodbye
+    examples: |
+      - Bye
+      - Goodbye
+      - See you later
+      - Catch you later
+      - Take care
+      - Bye Salu, see you soon
+
+  - intent: ask_common_health_issues_western_odisha
+    examples: |
+      - What are the most common health issues in Western Odisha?
+      - Tell me about health problems in Western Odisha.
+      - What are the frequent illnesses in Odisha?
+      - What are the health challenges in Western Odisha?
+      - Which diseases are common in Western Odisha?
+      - What are the public health concerns in Western Odisha?
+      - What are the major health issues in Western Odisha?
+      - Can you list common diseases in Western Odisha?
+      - What are the main health concerns here?
+
+  - intent: ask_prevent_malaria_western_odisha
+    examples: |
+      - How can I prevent malaria in Western Odisha?
+      - What are some ways to stay safe from malaria in Odisha?
+      - Can you give me malaria prevention tips?
+      - How to protect from malaria in monsoon?
+      - What precautions should I take against malaria?
+
+  - intent: ask_about_salu
+    examples: |
+      - How are you, Salu?
+      - What's up, Salu?
+      - Are you doing well, Salu?
+      - How is everything, Salu?
+      - What's new, Salu?
+
+  - intent: ask_about_health
+    examples: |
+      - How is the health situation in Odisha?
+      - Tell me about health in Odisha.
+      - What can we do to stay healthy in Odisha?
+      - Any health advice for people in Odisha?
+      - What are some common health tips for Odisha residents?
+  - intent: ask_what_salu_can_do
+    examples: |
+      - What can you do, Salu?
+      - How can you help me?
+      - What services do you offer?
+      - What are your capabilities?
+      - Tell me what you can do.
+      - How can you assist in healthcare?
+      - What are your features?
+      - Can you help with healthcare issues?
+
+  - intent: predict_health_risk
+    examples: |
+      - Can you predict my health risk?
+      - What are my chances of getting a disease?
+      - Predict my health status.
+      - Do I have any health risks?
+      - Can you assess my health condition?
+
+  - intent: ask_about_diabetes
+    examples: |
+      - I want to know about my diabetes
+      - Can you check my diabetes?
+      - Do I have diabetes?
+      - I want to check if I have diabetes
+

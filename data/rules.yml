@@ -1,0 +1,59 @@
+version: "2.0"
+
+rules:
+  # Rule for greeting
+  - rule: Greet the user
+    steps:
+      - intent: salu_greet
+      - action: utter_salu_greet
+
+  # Rule for saying goodbye
+  - rule: Say goodbye to the user
+    steps:
+      - intent: salu_goodbye
+      - action: utter_salu_goodbye
+
+  # Rule for asking about common health issues in Western Odisha
+  - rule: Provide common health issues in Western Odisha
+    steps:
+      - intent: ask_common_health_issues_western_odisha
+      - action: utter_ask_common_health_issues_western_odisha
+
+  # Rule for asking how Salu is doing
+  - rule: Respond to user's question about Salu
+    steps:
+      - intent: ask_about_salu
+      - action: utter_ask_about_salu
+
+  # Rule for asking about health in Odisha
+  - rule: Provide information about health in Odisha
+    steps:
+      - intent: ask_about_health
+      - action: utter_ask_about_health
+
+  - rule: Provide malaria prevention tips for Western Odisha
+    steps:
+      - intent: ask_prevent_malaria_western_odisha
+      - action: utter_prevent_malaria_western_odisha
+ 
+  - rule: Respond to what Salu can do
+    steps:
+      - intent: ask_what_salu_can_do
+      - action: utter_what_salu_can_do
+
+  # Rule to activate the diabetes form
+  - rule: Activate diabetes form
+    steps:
+      - intent: ask_about_diabetes
+      - action: diabetes_form
+      - active_loop: diabetes_form
+
+  # Rule to submit the diabetes form and predict diabetes
+  - rule: Submit diabetes form
+    condition:
+      # This rule only applies when the diabetes_form is active
+      - active_loop: diabetes_form
+    steps:
+      - action: diabetes_form
+      - active_loop: null
+      - action: action_predict_health_risk

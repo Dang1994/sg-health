@@ -1,0 +1,50 @@
+version: "2.0"
+
+stories:
+  - story: greet the user
+    steps:
+      - intent: salu_greet
+      - action: utter_salu_greet
+
+  - story: user says goodbye
+    steps:
+      - intent: salu_goodbye
+      - action: utter_salu_goodbye
+
+  - story: ask about common health issues in Western Odisha
+    steps:
+      - intent: ask_common_health_issues_western_odisha
+      - action: utter_ask_common_health_issues_western_odisha
+
+  - story: Provide malaria prevention tips for Western Odisha
+    steps:
+      - intent: ask_prevent_malaria_western_odisha
+      - action: utter_prevent_malaria_western_odisha
+
+  - story: ask about Salu's well-being
+    steps:
+      - intent: ask_about_salu
+      - action: utter_ask_about_salu
+
+  - story: ask about general health in Odisha
+    steps:
+      - intent: ask_about_health
+      - action: utter_ask_about_health
+  
+  - story: User asks what Salu can do
+    steps:
+      - intent: ask_what_salu_can_do
+      - action: utter_what_salu_can_do
+
+  - story: User asks about diabetes
+    steps:
+      - intent: ask_about_diabetes
+      - action: diabetes_form
+      - active_loop: diabetes_form
+
+  - story: Submit diabetes form and predict
+    steps:
+      - active_loop: diabetes_form
+      - action: diabetes_form
+      - active_loop: null
+      - action: action_predict_health_risk
