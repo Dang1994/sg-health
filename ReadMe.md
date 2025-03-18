@@ -1,4 +1,3 @@
-
 # **SALU – Smart AI Assistant for Life and Uttam Healthcare**  
 
 ## **Overview**  
@@ -21,33 +20,29 @@ To address these issues, I am developing **SALU**, an AI-powered digital assista
 ## **Motivation**  
 Despite rapid advancements in AI, IoT, and digital assistants, rural healthcare remains underserved. **SALU** bridges this gap by leveraging cutting-edge AI to enhance accessibility, understanding, and engagement with healthcare services.  
 
-Here’s a concise version of the healthcare challenges for your **README** file:  
-
----
-
 ## **Challenges in Rural Healthcare** 
-
-Healthcare is facing many challenges, as follows:
+Healthcare in rural areas faces multiple challenges, as follows:
 
 ### **1. Doctor-Patient Disparity**  
 - High population and low doctor availability (1 million doctors for 1.4 billion people in India).  
 - Uneven distribution: 58% of doctors serve urban areas, only 18.8% serve rural regions.  
 - Limited consultation time (2-3 minutes per patient) leads to insufficient health guidance.
 
-![alt text](image-1.png) 
+![Doctor-Patient Disparity](readme-images/image-1.png)  
+*Image showing the disparity in doctor availability between rural and urban areas.*
 
 ### **2. Limited Access to Healthcare Information**  
 - Many doctors and hospitals lack digital presence.  
 - Most healthcare information is available only in English, creating language barriers.  
 - No standardized process to choose the best doctor. 
 
-![alt text](image-2.png)
+![Limited Access to Healthcare](readme-images/image-2.png)  
+*Image illustrating the limited access to healthcare information in rural regions.*
 
 ### **3. Gaps in Post-Treatment Care & Nutrition Guidance**  
 - No dedicated nutrition experts for personalized diet planning.  
 - Patients rely on informal advice, leading to ineffective recovery.  
 - Lack of region-specific dietary recommendations. 
-
 
 ### **4. Lag in Healthcare Digitalization**  
 - Government digital health initiatives exist but are yet to reach rural areas effectively.  
@@ -57,7 +52,9 @@ Healthcare is facing many challenges, as follows:
 - Health programs rely on ineffective communication methods (posters, phone messages, word of mouth).  
 - Many rural populations remain unaware of healthcare programs and services. 
 
-![alt text](image-3.png)
+![Government Awareness](readme-images/image-3.png)  
+*Image showing communication barriers in rural healthcare.*
+
 ### **6. Advancing Healthcare with Technology**  
 - AI, IoT, NLP, and digital assistants are transforming industries but are underutilized in rural healthcare.  
 - Lack of explainable AI and privacy-preserving techniques in Healthcare 4.0.  
@@ -74,10 +71,9 @@ Our proposed AI-driven digital assistant **SALU** addresses these challenges thr
 ✅ **Telemedicine & awareness programs**  
 ✅ **AI-powered healthcare guidance in regional languages**  
 
----  
 ### **Methodology**
 
-Our proposed system, **SALU**, is designed to empower rural patients and families by providing a comprehensive health assistance platform. The system is structured across three key layers:
+The **SALU** system is designed to empower rural patients and families by providing a comprehensive health assistance platform. The system is structured across three key layers:
 
 1. **User Interface Layer**: Built using **React Native Expo**, this layer provides a cross-platform interface for patients, doctors, and government employees. Users can input symptoms, access diagnostic suggestions, and interact with the AI-powered assistant.
 
@@ -85,47 +81,36 @@ Our proposed system, **SALU**, is designed to empower rural patients and familie
 
 3. **Data Management and External Layer**: This layer manages sensitive health data securely using encryption and integrates external data sources like diagnostic centers and government platforms (e.g., **Ayushman Bharat Digital Mission**). It also connects with telemedicine platforms and health insurance systems.
 
-![alt text](image-6.png)
+![System Architecture](readme-images/image-6.png)  
+*Image illustrating the architecture of SALU.*
 
-### Key Features:
+### **Key Features**
 - **SALU AI Assistant**: A chatbot that assists users with symptom analysis, test report interpretation, and diet planning.
 - **Arogya Sambad (Telemedicine)**: Enables users to search for doctors, schedule appointments, and conduct virtual consultations.
 - **Government Awareness Interface**: Provides updates on public health initiatives and government programs.
 
+![Key Features](readme-images/image.png)  
+*Image demonstrating the key features of the SALU system.*
 
-### Technical Components:
+### **Technical Components**
 - **Frontend**: Developed using **React Native Expo** for cross-platform compatibility.
 - **Backend**: Powered by **Rasa** for conversational AI and **Flask** for telemedicine integration.
 - **Machine Learning**: Models trained for disease prediction (e.g., diabetes, kidney disease) and nutritional analysis using datasets like urine dipstick tests and regional food data.
 - **Database**: **PostgreSQL** for managing user profiles, appointments, and health records.
-- **APIs**: RESTful APIs for seamless integration with external services like Razorpay for payments and WebSocket for virtual consultations. #TODO
+- **APIs**: RESTful APIs for seamless integration with external services like Razorpay for payments and WebSocket for virtual consultations.
 
-### Workflow:
+### **Workflow**
 1. Users input symptoms into the SALU chatbot.
 2. The system suggests diagnostic tests and analyzes the results to detect potential diseases.
 3. Users can search for doctors, schedule appointments, and receive post-treatment diet plans.
 4. Integration with third-party systems (e.g., diagnostic centers, ABDM) ensures accurate and up-to-date health data.
-![alt text](image-5.png)
+
+![Workflow](readme-images/image-5.png)  
+*Image illustrating the workflow of SALU from symptom input to doctor consultation.*
 
 ---
 
-Rasa Server
+## **Running the Application** TODO
 
-Active Server
-venv\Scripts\activate
- 
-Run 
-rasa run actions
-
-
-Expo Router
-Rasa Server
-
-Active Server
-venv\Scripts\activate
- 
-Run 
-rasa run actions
-
-
-Expo Router
+### **Rasa Server**
+1. **Activate the virtual environment**:
